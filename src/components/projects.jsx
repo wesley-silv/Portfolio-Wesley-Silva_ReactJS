@@ -64,12 +64,12 @@ export const Projects = () => {
 // Projects dates
 const projects = [
   {
-    title: 'KN Leads Docs',
-    techStack: 'Mintlify, MDX, Git e GitHub',
-    description: 'Documentação de software que utiliza o framework Mintlify para gerar documentação dinâmica e detalhada de processos.',
-    githubLink: 'https://github.com/judsonjuniorr/knleads-docs',
-    liveLink: 'https://docs.knleads.com/starting/introduction',
-    image: 'https://raw.githubusercontent.com/judsonjuniorr/knleads-docs/main/public/cover.png',
+    title: 'Coofee',
+    techStack: 'JavaScript, React, Vite, Tailwind CSS e API',
+    description: 'Projeto de e-commerce de café com funcionalidades de carrinho de compras, filtros e integração com API para exibição de produtos.',
+    githubLink: 'https://github.com/wesley-silv/Coffee_ReactJS',
+    liveLink: 'https://coffee.vercel.app/',
+    image: '/coffee_design.png',
   },
   {
     title: 'Calculadora',
@@ -109,6 +109,6 @@ const projects = [
     description: 'Automação de configuração de redes IPs/DHCP utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
     githubLink: 'https://github.com/wesley-silv/Network-auto-config_Python',
     liveLink: 'https://',
-    image: '/Code and GUI - Network config auto Fiscaltech.png',
+    image: '/network_design.png',
   }
 ];
