@@ -64,11 +64,11 @@ export const Projects = () => {
 // Projects dates
 const projects = [
   {
-    title: 'Coofee',
+    title: 'Our Coffee',
     techStack: 'JavaScript, React, Vite, Tailwind CSS e API',
     description: 'Projeto de e-commerce de café com funcionalidades de carrinho de compras, filtros e integração com API para exibição de produtos.',
-    githubLink: 'https://github.com/wesley-silv/Coffee_ReactJS',
-    liveLink: 'https://coffee.vercel.app/',
+    githubLink: 'https://github.com/wesley-silv/Our-Coffee_ReactJS',
+    liveLink: 'https://ourcoffee.vercel.app/',
     image: '/coffee_design.png',
   },
   {
