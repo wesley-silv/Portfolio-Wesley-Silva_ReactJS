@@ -37,9 +37,11 @@ const Description = () => {
           </p>
           <p className="leading-relaxed mt-4 text-gray-700">
             Formação contínua em tecnologias modernas com
-            <span className="text-blue-900 font-semibold"> Rocketseat </span>
-            e
-            <span className="text-blue-900 font-semibold"> Alura</span>.
+            <span className="text-blue-900 font-semibold"> Rocketseat</span>
+            ,
+            <span className="text-blue-900 font-semibold"> Alura</span>
+            ,
+            <span className="text-blue-900 font-semibold"> Digital Innovation One</span>.
           </p>
         </article>
       </section>
