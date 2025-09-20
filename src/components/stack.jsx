@@ -1,4 +1,4 @@
-import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact, IoLogoNodejs } from "react-icons/io5";
+import { IoLogoHtml5, IoLogoCss3, IoLogoJavascript, IoLogoReact, IoLogoNodejs, IoLogoPython } from "react-icons/io5";
 import { SiTailwindcss, SiBootstrap, SiJquery } from "react-icons/si";
 import React, { useState } from 'react';
 
@@ -46,6 +46,10 @@ const Stack = () => {
         <IoLogoNodejs 
           className="text-green-500 cursor-pointer text-5xl hover:scale-110 transition-transform duration-200"
           onClick={() => handleClick("Node")} 
+        />
+         <IoLogoPython
+          className="text-blue-500 cursor-pointer text-5xl hover:scale-110 transition-transform duration-200"
+          onClick={() => handleClick("Python")} 
         />
       </section>
 
@@ -119,6 +123,15 @@ const Stack = () => {
             <p className="text-lg">
               Node.js é um ambiente JavaScript server-side que permite criar aplicações escaláveis e rápidas,
               com uma ampla gama de possibilidades para desenvolvimento back-end.
+            </p>
+          </div>
+        )}
+        {activeIcon === "Python" && (
+          <div className="bg-blue-500 text-white p-6 rounded-lg shadow-lg text-left w-full">
+            <h3 className="text-2xl font-bold mb-2">Python</h3>
+            <p className="text-lg">
+              Python é uma linguagem de programação versátil e de alto nível, ideal para desenvolvimento web, análise de dados, 
+              inteligência artificial e automação. Sua sintaxe clara e legibilidade a tornam acessível para iniciantes e poderosa para especialistas.
             </p>
           </div>
         )}

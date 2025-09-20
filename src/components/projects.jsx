@@ -105,10 +105,18 @@ const projects = [
   },
   {
     title: 'Automação Redes',
-    techStack: 'Python, Subprocess, Json, Tkinter',
-    description: 'Automação de configuração de redes IPs/DHCP utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
+    techStack: 'Python, Subprocess, Ipaddress, Tkinter',
+    description: 'Automação para configuração de redes IPs/DHCP utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
     githubLink: 'https://github.com/wesley-silv/Network-auto-config_Python',
-    liveLink: 'https://',
-    image: '/network_design.png',
+    liveLink: '',
+    image: '/Network Auto Config Fiscaltech - GUI.png',
+  },
+  {
+    title: 'Automação Busca IPs',
+    techStack: 'Python, Subprocess, Ipaddress, Tkinter',
+    description: 'Automação para análise de redes IPs utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
+    githubLink: 'https://github.com/wesley-silv/Search-IPs-Address-Fiscaltech_Python',
+    liveLink: '',
+    image: '/Search IPs Address Fiscaltech - GUI.png',
   }
 ];
