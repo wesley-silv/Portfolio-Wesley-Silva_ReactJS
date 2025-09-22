@@ -20,22 +20,22 @@ const Footer = () => {
           <h3 className="text-xl font-semibold mb-4">Contatos</h3>
           <div className="flex flex-col items-center lg:items-start space-y-2 mt-2">
             <div className="flex items-center">
-              <FaPhoneAlt className="mr-2 text-lg" />
+              <FaPhoneAlt className="mr-2 text-xl" />
               <span>(34) 99254-0828</span>
             </div>
             <div className="flex items-center">
-              <FaEnvelope className="mr-2 text-lg" />
+              <FaEnvelope className="mr-2 text-xl" />
               <span>wesleysilvaconceicao@outlook.com</span>
             </div>
           </div>
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center space-x-6 text-2xl">
-          <a href="https://linkedin.com/in/wesleysilv" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-200">
+        <div className="flex justify-center space-x-6 text-[1.8rem]">
+          <a href="https://linkedin.com/in/wesleysilv" title='LinkedIn' target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-200">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/wesleysilv" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-200">
+          <a href="https://github.com/wesleysilv" title='GitHub' target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-200">
             <FaGithub />
           </a>
         </div>

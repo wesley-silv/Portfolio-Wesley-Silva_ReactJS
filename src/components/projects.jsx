@@ -64,6 +64,14 @@ export const Projects = () => {
 // Projects dates
 const projects = [
   {
+    title: 'Gestão de Investimentos',
+    techStack: 'HTML, CSS, JavaScript, Node.js, Express, Nodemon e BRAPI',
+    description: 'Matemática financeira para investimentos, desenvolvido com integração de API para consulta de cotações.',
+    githubLink: 'https://github.com/wesley-silv/Maths-calcs',
+    liveLink: 'https://investmentsmanagements.vercel.app',
+    image: '/Investments Managements - GUI.png',
+  },
+  {
     title: 'Our Coffee',
     techStack: 'JavaScript, React, Vite, Tailwind CSS e API',
     description: 'Projeto de e-commerce de café com funcionalidades de carrinho de compras, filtros e integração com API para exibição de produtos.',
@@ -72,12 +80,28 @@ const projects = [
     image: '/coffee_design.png',
   },
   {
+    title: 'Automação Redes',
+    techStack: 'Python, Subprocess, Ipaddress, Tkinter',
+    description: 'Automação para configuração de redes IPs/DHCP utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
+    githubLink: 'https://github.com/wesley-silv/Network-auto-config_Python',
+    liveLink: '',
+    image: '/Network Auto Config Fiscaltech - GUI.png',
+  },
+  {
+    title: 'Automação Busca IPs',
+    techStack: 'Python, Subprocess, Ipaddress, Tkinter',
+    description: 'Automação para análise de redes IPs utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
+    githubLink: 'https://github.com/wesley-silv/Search-IPs-Address-Fiscaltech_Python',
+    liveLink: 'https://github.com/wesley-silv/Investments-Managements_JavaScript',
+    image: '/Search IPs Address Fiscaltech - GUI.png',
+  },
+  {
     title: 'Calculadora',
     techStack: 'React, React icons, Router e Vite',
     description: 'Aplicação de calculadora em React com interface responsiva e operações matemáticas básicas.',
     githubLink: 'https://github.com/wesley-silv/Calculator-React-JS',
     liveLink: 'https://calculator-react-js-lemon.vercel.app/',
-    image: 'https://raw.githubusercontent.com/wesley-silv/Calculator-React-JS/main/public/cover.png',
+    image: '/Calculator - GUI.png',
   },
   {
     title: 'Busca CEP',
@@ -95,28 +119,4 @@ const projects = [
     liveLink: 'https://react-app-organo-ct1x-d9922o0b5-wesley-silv.vercel.app/',
     image: 'https://raw.githubusercontent.com/wesley-silv/Organogram-React-JS/main/public/cover.png',
   },
-  {
-    title: 'Gestão de Investimentos',
-    techStack: 'HTML, CSS, JavaScript, Node.js, Express, Nodemon e BRAPI',
-    description: 'Matemática financeira para investimentos, desenvolvido com integração de API para consulta de cotações.',
-    githubLink: 'https://github.com/wesley-silv/Maths-calcs',
-    liveLink: 'https://investmentsmanagements.vercel.app',
-    image: '/Investments Managements - GUI.png',
-  },
-  {
-    title: 'Automação Redes',
-    techStack: 'Python, Subprocess, Ipaddress, Tkinter',
-    description: 'Automação para configuração de redes IPs/DHCP utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
-    githubLink: 'https://github.com/wesley-silv/Network-auto-config_Python',
-    liveLink: '',
-    image: '/Network Auto Config Fiscaltech - GUI.png',
-  },
-  {
-    title: 'Automação Busca IPs',
-    techStack: 'Python, Subprocess, Ipaddress, Tkinter',
-    description: 'Automação para análise de redes IPs utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
-    githubLink: 'https://github.com/wesley-silv/Search-IPs-Address-Fiscaltech_Python',
-    liveLink: 'https://github.com/wesley-silv/Investments-Managements_JavaScript',
-    image: '/Search IPs Address Fiscaltech - GUI.png',
-  }
 ];
