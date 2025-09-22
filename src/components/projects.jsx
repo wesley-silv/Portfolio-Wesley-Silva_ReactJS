@@ -96,12 +96,12 @@ const projects = [
     image: 'https://raw.githubusercontent.com/wesley-silv/Organogram-React-JS/main/public/cover.png',
   },
   {
-    title: 'Cálculos Financeiros',
+    title: 'Gestão de Investimentos',
     techStack: 'HTML, CSS, JavaScript, Node.js, Express, Nodemon e BRAPI',
     description: 'Matemática financeira para investimentos, desenvolvido com integração de API para consulta de cotações.',
     githubLink: 'https://github.com/wesley-silv/Maths-calcs',
-    liveLink: 'https://mathscalcs.vercel.app',
-    image: 'https://raw.githubusercontent.com/wesley-silv/Maths-calcs/main/public/cover.png',
+    liveLink: 'https://investmentsmanagements.vercel.app',
+    image: '/Investments Managements - GUI.png',
   },
   {
     title: 'Automação Redes',
@@ -116,7 +116,7 @@ const projects = [
     techStack: 'Python, Subprocess, Ipaddress, Tkinter',
     description: 'Automação para análise de redes IPs utilizando bibliotecas Python para gerenciamento de dispositivos de rede.',
     githubLink: 'https://github.com/wesley-silv/Search-IPs-Address-Fiscaltech_Python',
-    liveLink: '',
+    liveLink: 'https://github.com/wesley-silv/Investments-Managements_JavaScript',
     image: '/Search IPs Address Fiscaltech - GUI.png',
   }
 ];
