@@ -1,35 +1,100 @@
 import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
+import { Moon, Sun } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
+import ShieldLogo from './shield-logo'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const navLinks = [
+    { to: "/", label: "Início" },
+    { to: "/budgets", label: "Orçamentos" },
+    // { to: "/projects", label: "Projetos" },
+    // { to: "/contact", label: "Contato" },
+  ];
+
+  const handleMenuToggle = () => setIsMenuOpen((prev) => !prev);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const handleThemeToggle = () => {
+    setDarkMode((prev) => !prev);
+    document.documentElement.classList.toggle("dark");
   };
 
   return (
-    <header className="flex items-center justify-between bg-gradient-to-r from-blue-800 to-blue-500 w-full h-16 px-4 mb-16 shadow-xl relative z-20">
-      {/* Logo Section */}
-      <h1 className="text-white text-3xl font-bold italic tracking-wide">
-        <span className="text-blue-200">Front</span><sub className='text-blue-300'>end</sub>
-      </h1>
+    <header className="sticky top-0 flex items-center justify-between 
+      backdrop-blur-md bg-white/30 dark:bg-gray-900/30
+      w-full h-16 px-6 shadow-lg z-30">
+      
+      {/* Logo as link */}
+      <Link to="/" className="flex items-center space-x-2">
+        <p className='text-2xl font-bold italic text-blue-600'>Wesley<span className='text-2xl font-bold italic text-blue-400'><sub>Silva</sub></span></p>
+        <span className="sr-only">Home</span>
+      </Link>
 
-      {/* Menu Icon (always on top) */}
-      <div
+      {/* Desktop Links */}
+      <nav className="hidden lg:flex space-x-8 items-center">
+        {navLinks.map(({ to, label }) => (
+          <Link
+            key={to}
+            to={to}
+            className={`text-lg font-medium transition-colors duration-200 
+              ${location.pathname === to 
+                ? "text-yellow-400 border-b-2 border-yellow-400" 
+                : "text-gray-800 dark:text-gray-200 hover:text-yellow-400"}`}
+          >
+            {label}
+          </Link>
+        ))}
+        <button
+          onClick={handleThemeToggle}
+          aria-label="Toggle theme"
+          className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+        >
+          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+      </nav>
+
+      {/* Mobile Menu Toggle */}
+      <button
         onClick={handleMenuToggle}
-        className="text-white text-3xl cursor-pointer absolute right-6 top-5 z-30 lg:hidden"
+        aria-controls="nav-menu"
+        aria-expanded={isMenuOpen}
+        aria-label="Toggle navigation"
+        className="lg:hidden text-3xl text-gray-800 dark:text-gray-200"
       >
         {isMenuOpen ? <RiCloseLine /> : <RiMenu2Line />}
-      </div>
+      </button>
 
-      {/* Navbar Links */}
-      <nav className={`fixed inset-y-0 right-0 bg-blue-900 bg-opacity-95 p-6 w-2/3 max-w-xs transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 lg:flex lg:bg-transparent lg:items-center lg:space-x-8 lg:w-auto z-20`}>
-        <Link className="block text-white text-lg py-2 lg:py-0 hover:text-yellow-300 transition-colors duration-200" to="/" onClick={() => setIsMenuOpen(false)}>Início</Link>
-        <Link className="block text-white text-lg py-2 lg:py-0 hover:text-yellow-300 transition-colors duration-200" to="/budgets" onClick={() => setIsMenuOpen(false)}>Orçamentos</Link>
-        {/* <Link className="block text-white text-lg py-2 lg:py-0 hover:text-yellow-300 transition-colors duration-200" to="/tools" onClick={() => setIsMenuOpen(false)}>Ferramentas</Link> */}
-      </nav>
+      {/* Fullscreen Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-black/80 flex flex-col items-center justify-center space-y-6 z-20">
+          {navLinks.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              onClick={closeMenu}
+              className="text-2xl text-white hover:text-yellow-400 transition-colors"
+            >
+              {label}
+            </Link>
+          ))}
+          <button
+            onClick={() => {
+              handleThemeToggle();
+              closeMenu();
+            }}
+            aria-label="Toggle theme"
+            className="p-3 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+          >
+            {darkMode ? <Sun size={24} /> : <Moon size={24} />}
+          </button>
+        </div>
+      )}
     </header>
   );
 };

@@ -4,41 +4,59 @@ import { FaCopyright, FaPhoneAlt, FaEnvelope, FaLinkedin, FaGithub } from "react
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const contactItems = [
+    { icon: <FaPhoneAlt />, label: "Telefone", value: "(34) 99254-0828" },
+    { icon: <FaEnvelope />, label: "Email", value: "wesleysilvaconceicao@outlook.com" },
+  ];
+
+  const socialLinks = [
+    { icon: <FaLinkedin />, href: "https://linkedin.com/in/wesleysilv", label: "LinkedIn" },
+    { icon: <FaGithub />, href: "https://github.com/wesleysilv", label: "GitHub" },
+  ];
+
   return (
-    <footer className="bg-gradient-to-r from-blue-700 to-blue-500 p-8 text-white">
-      <div className="container mx-auto flex flex-col items-center lg:flex-row justify-between gap-4">
-        {/* Copyright Section */}
-        <div className="flex items-center text-center lg:text-left">
-          <FaCopyright className="mr-2 text-2xl" />
-          <p className="text-lg">
-            Todos os direitos reservados © {currentYear}
+    <footer className="bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 text-white py-12 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-0">
+
+        {/* Copyright */}
+        <div className="flex items-center space-x-3 text-center lg:text-left">
+          <FaCopyright className="text-2xl lg:text-3xl" />
+          <p className="text-lg lg:text-xl font-semibold">
+            Todos os direitos reservados © {currentYear} Wesley Silva
           </p>
         </div>
 
-        {/* Contact Information */}
-        <div className="text-center lg:text-left">
-          <h3 className="text-xl font-semibold mb-4">Contatos</h3>
-          <div className="flex flex-col items-center lg:items-start space-y-2 mt-2">
-            <div className="flex items-center">
-              <FaPhoneAlt className="mr-2 text-xl" />
-              <span>(34) 99254-0828</span>
+        {/* Contact Cards */}
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-center lg:items-start">
+          {contactItems.map((item, index) => (
+            <div key={index} className="p-4 rounded-xl flex items-center space-x-3">
+              <span className="text-xl lg:text-2xl">{item.icon}</span>
+              <span className="text-base lg:text-lg">{item.value}</span>
             </div>
-            <div className="flex items-center">
-              <FaEnvelope className="mr-2 text-xl" />
-              <span>wesleysilvaconceicao@outlook.com</span>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Social Links */}
-        <div className="flex justify-center space-x-6 text-[1.8rem]">
-          <a href="https://linkedin.com/in/wesleysilv" title='LinkedIn' target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-200">
-            <FaLinkedin />
-          </a>
-          <a href="https://github.com/wesleysilv" title='GitHub' target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-200">
-            <FaGithub />
-          </a>
+        <div className="flex items-center space-x-6 text-2xl lg:text-3xl">
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.href}
+              aria-label={social.label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transform hover:scale-125 hover:text-yellow-400 hover:drop-shadow-xl transition-all duration-300"
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
+
+      </div>
+
+      {/* Optional bottom line */}
+      <div className="mt-8 border-t border-white/20 pt-4 text-center text-sm lg:text-base text-white/70">
+        Designed & Developed by Developer Wesley Silva
       </div>
     </footer>
   );
