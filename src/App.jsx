@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import Media from './components/media';
 import Banner from './components/banner';
 import Stack from './components/stack';
@@ -7,7 +7,7 @@ import CodeSample from './components/code-sample';
 import Tools from './components/tools';
 import Description from './components/description';
 import { Projects } from './components/projects';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 
 const App = () => {
   const words = [

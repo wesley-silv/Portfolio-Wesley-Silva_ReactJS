@@ -2,7 +2,7 @@ import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
 import { Moon, Sun } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ShieldLogo from './ShieldLogo'
+import ShieldLogo from './shield-logo'
 
 
 const Navbar = () => {
