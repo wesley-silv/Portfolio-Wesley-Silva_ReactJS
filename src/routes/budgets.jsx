@@ -1,6 +1,6 @@
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navbar';
 import Media from '../components/media';
-import Footer from '../components/Footer';
+import Footer from '../components/footer';
 
 
 const Budgets = () => {
