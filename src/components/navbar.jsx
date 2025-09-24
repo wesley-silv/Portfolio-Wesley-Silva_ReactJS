@@ -13,8 +13,8 @@ const Navbar = () => {
   const navLinks = [
     { to: "/", label: "Início" },
     { to: "/budgets", label: "Orçamentos" },
-    { to: "/projects", label: "Projetos" },
-    { to: "/contact", label: "Contato" },
+    // { to: "/projects", label: "Projetos" },
+    // { to: "/contact", label: "Contato" },
   ];
 
   const handleMenuToggle = () => setIsMenuOpen((prev) => !prev);

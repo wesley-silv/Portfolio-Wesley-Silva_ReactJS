@@ -1,7 +1,7 @@
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import Media from '../components/media';
-import Footer from '../components/footer';
-import Banner from '../components/banner';
+import Footer from '../components/Footer';
+
 
 const Budgets = () => {
   return (
