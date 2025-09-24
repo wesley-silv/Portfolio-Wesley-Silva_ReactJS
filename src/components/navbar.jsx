@@ -2,7 +2,7 @@ import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
 import { Moon, Sun } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ShieldLogo from './shield-logo'
+import LogoWS from './logows'
 
 
 const Navbar = () => {
@@ -32,7 +32,7 @@ const Navbar = () => {
       
       {/* Logo as link */}
       <Link to="/" className="flex items-center space-x-2">
-        <p className='text-2xl font-bold italic text-blue-600'>Wesley<span className='text-2xl font-bold italic text-blue-400'><sub>Silva</sub></span></p>
+        <LogoWS />
         <span className="sr-only">Home</span>
       </Link>
 
