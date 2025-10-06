@@ -29,7 +29,7 @@ const Media = () => {
       <div
         className={`${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } bg-gradient-to-r from-blue-500 to-blue-900 bg-opacity-95 p-4 pl-10 rounded-r-lg transition-transform duration-500 ease-in-out flex items-center`}
+        } bg-gradient-to-r backdrop-blur-md bg-white/30 bg-opacity-95 dark:bg-gray-900/30 p-4 pl-10 rounded-r-md shadow-md transition-transform duration-500 ease-in-out flex items-center`}
       >
         {/* Links de mídia social exibidos somente quando o container está aberto */}
         {isOpen && (
